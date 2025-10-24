@@ -23,12 +23,12 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 mb-4">
+          <Link to="/" className="flex flex-col sm:flex-row sm:items-center sm:gap-3 mb-4">
             <div className="flex items-center gap-3">
               <img src={Logo} alt="Global Financial Investments Logo" className="w-10 h-10 object-contain" />
               <img src={textLogo} alt="Logo Text" className="h-6 object-contain" />
             </div>
-          </div>
+          </Link>
 
           <p className="text-sm text-black/80 leading-relaxed mb-6 max-w-sm">
             A secure multi-currency wallet that lets you deposit, withdraw, and transfer both fiat and crypto across Africa and global markets.

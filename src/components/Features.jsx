@@ -39,17 +39,17 @@ const Feature = () => {
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
             {/* Left content */}
             <div className="md:max-w-[55%] text-center md:text-left">
-              <span className="inline-block bg-[#C18300] text-white text-[10px] sm:text-xs px-4 sm:px-5 py-1 rounded-full mb-4 sm:mb-6">
+              <span className="inline-block bg-[#E2A336] text-white text-[10px] sm:text-xs px-4 sm:px-5 py-2 rounded-full mb-4 sm:mb-6">
                 International Transfers
               </span>
 
-              <h3 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight leading-snug">
+              <h3 className="text-2xl sm:text-3xl text-white md:text-5xl font-semibold tracking-tight leading-snug">
                 Move money seamlessly
                 <br />
-                <span className="text-[#FFD56A]">Across borders</span>
+                <span className="text-[#FFBA18]">Across borders</span>
               </h3>
 
-              <p className="text-white/80 mt-3 sm:mt-4 text-[12px] sm:text-sm leading-relaxed max-w-md mx-auto md:mx-0">
+              <p className="text-white/80 mt-3 sm:mt-4 text-[12px] sm:text-sm leading-relaxed mb-16 max-w-md mx-auto md:mx-0">
                 Send money quickly to your loved ones in Africa with support for
                 over 15 currencies. Benefit from great rates, clear fees, and the
                 reliability of stablecoins for every transfer.
@@ -180,7 +180,7 @@ const Feature = () => {
                 className="bg-[#EBD9FF] border-2 border-pink-200 rounded-2xl px-3 sm:px-4 py-2 sm:py-3 shadow-md transform-gpu origin-center"
               >
                 <p className="text-gray-900 text-sm sm:text-base font-semibold">
-                  You sent <span className="text-purple-600">@roosevelt</span> $200
+                  You sent <span className="text-purple-600">@michael</span> $200
                 </p>
                 <p className="text-[11px] sm:text-xs text-gray-600">Data stipend</p>
               </motion.div>

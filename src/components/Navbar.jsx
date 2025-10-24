@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import logo from "../assets/images/gfilogo.png";
 import textLogo from "../assets/images/gfilogotext.png";
 import earlyaccesssvg from "../assets/images/earlyaccesssvg.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,6 +28,7 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between px-3 sm:px-4 md:px-6 w-full overflow-x-hidden">
         {/* Logo Section */}
+        <Link to="/">
         <motion.div
           className="flex items-center gap-1 sm:gap-2 cursor-pointer select-none"
           whileHover={{ scale: 1.05 }}
@@ -43,11 +45,12 @@ const Navbar = () => {
             className="h-4 sm:h-5 md:h-6 object-contain max-w-[80px] sm:max-w-[100px]"
           />
         </motion.div>
+        </Link>
 
         {/* Desktop Button Only */}
         <div className="hidden sm:block">
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 0.95 }}
             whileTap={{ scale: 0.95 }}
             className="flex items-center gap-2 bg-[#1C2024] text-white px-5 py-2.5 rounded-md font-medium text-sm md:text-base transition-all duration-300 hover:bg-black"
           >

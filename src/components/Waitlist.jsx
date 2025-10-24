@@ -37,17 +37,17 @@ const JoinWaitlist = () => {
           <input
             type="email"
             placeholder="Enter email"
-            className="flex-grow w-full px-4 py-3 bg-[#646464] text-gray-100 placeholder-gray-300 
+            className="flex-grow w-auto px-4 py-3 bg-[#646464] text-gray-100 placeholder-gray-300 
             text-sm focus:outline-none"
           />
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-[#1A1A1A] text-white w-full sm:w-auto px-6 py-3 
-            text-sm font-semibold border-2 border-[#646464] rounded-b-lg sm:rounded-b-none sm:rounded-r-lg 
+            text-sm font-semibold border-2 border-[#646464] rounded-b-xl sm:rounded-b-none sm:rounded-r-lg 
             hover:bg-white hover:text-black transition-all duration-300"
           >
-            Join
+            Join waitlist
           </motion.button>
         </div>
       </motion.div>

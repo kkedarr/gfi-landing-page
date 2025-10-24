@@ -5,7 +5,7 @@ const TermsOfService = () => {
   return (
     <div className="w-full flex flex-col font-geist">
       {/* === Header Section === */}
-      <div className="w-full bg-[#FDECC0] py-20 text-gray-900">
+      <div className="w-full bg-[#FFEBC7] py-20 text-gray-900">
         <div className="max-w-5xl mx-auto px-6 md:px-20">
           <div className="flex items-center gap-3 mb-4">
             <h1 className="text-4xl md:text-5xl font-bold">Terms of Service</h1>
