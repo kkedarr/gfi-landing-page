@@ -26,7 +26,7 @@ const Hero = () => {
       ref={ref}
       className="bg-[#FFEBC7] py-16 md:py-24 overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-12 grid md:grid-cols-2 items-center gap-12 font-geisel">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 items-center gap-12 font-geisel">
 
         {/*  Left Side — Text + Input */}
         <div className="text-left max-w-md md:max-w-lg mx-auto md:mx-0 order-2 md:order-1">
@@ -47,10 +47,10 @@ const Hero = () => {
             <input
               type="email"
               placeholder="Enter email"
-              className="flex-grow px-4 bg-[#4F3422] py-3 text-gray-100 text-sm placeholder:text-gray-400 focus:outline-none w-full sm:w-auto"
+              className="flex-grow px-4 bg-[#4F3422] py-3 text-gray-100 text-sm rounded-2xl placeholder:text-gray-400 focus:outline-none w-full sm:w-auto"
             />
             <button
-              className="bg-[#FFBA18] text-[#4F3422] sm:px-6 sm:py-3 px-4 py-2 text-xs rounded-2xl sm:text-sm font-semibold sm:border-0 sm:border-2 border-2 border-[#4F3422] hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto"
+              className="bg-[#FFBA18] text-[#4F3422] sm:px-6 sm:py-3 px-4 py-2 text-xs rounded-xl sm:text-sm font-semibold sm:border-0 sm:border-2 border-2 border-[#4F3422] hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto"
             >
               Join waitlist
             </button>
@@ -69,7 +69,7 @@ const Hero = () => {
           <motion.img
             src={heroMockup}
             alt="App Mockup"
-            className="w-[80%] sm:w-[70%] max-w-[320px] md:w-[420px] drop-shadow-2xl relative md:left-[-40px] md:top-[95px]"
+            className="w-full sm:w-[70%] max-w-[400px] md:w-[420px] drop-shadow-2xl relative md:left-[10px] md:top-[86px]"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

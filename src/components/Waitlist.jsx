@@ -44,7 +44,7 @@ const JoinWaitlist = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-[#1A1A1A] text-white w-full sm:w-auto px-6 py-3 
-            text-sm font-semibold border-2 border-[#646464] rounded-b-xl sm:rounded-b-none sm:rounded-r-lg 
+            text-sm font-semibold border-2 border-[#646464] rounded-xl 
             hover:bg-white hover:text-black transition-all duration-300"
           >
             Join waitlist

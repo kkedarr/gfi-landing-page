@@ -13,7 +13,7 @@ const Footer = () => {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
 
         {/* === Left section === */}
         <motion.div
@@ -99,12 +99,12 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter email"
-              className="flex-grow px-4 py-3 bg-[#4F3422] text-white placeholder:text-gray-300 text-sm focus:outline-none w-full sm:w-auto"
+              className="flex-grow px-4 py-3 bg-[#4F3422] text-white placeholder:text-gray-300 rounded-xl text-sm focus:outline-none w-full sm:w-auto"
             />
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#FFBA18] text-[#4F3422] px-6 py-3 text-sm font-semibold rounded-none sm:rounded-lg border-2 border-[#4F3422] hover:bg-white hover:text-black transition-all duration-300 mt-3 sm:mt-0"
+              className="bg-[#FFBA18] text-[#4F3422] px-6 py-3 text-sm font-semibold rounded-xl sm:rounded-xl border-2 border-[#4F3422] hover:bg-white hover:text-black transition-all duration-300 mt-3 sm:mt-0"
             >
               Join waitlist
             </motion.button>

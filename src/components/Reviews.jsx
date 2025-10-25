@@ -51,7 +51,7 @@ const Reviews = () => {
     <section className="w-full px-6 md:px-20 py-20 bg-white text-gray-900 font-geist">
       {/* Header */}
       <motion.div
-        className="max-w-6xl mx-auto text-center mb-16"
+        className="max-w-7xl mx-auto text-center mb-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
