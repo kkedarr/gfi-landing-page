@@ -4,7 +4,7 @@ import TermsIcon from "../assets/images/termsofserviceicon.png";
 const TermsOfService = () => {
   return (
     <div className="w-full flex flex-col font-geist">
-      {/* === Header Section === */}
+      {/* Header Section */}
       <div className="w-full bg-[#FFEBC7] py-20 text-gray-900">
         <div className="max-w-5xl mx-auto px-6 md:px-20">
           <div className="flex items-center gap-3 mb-4">
@@ -24,10 +24,10 @@ const TermsOfService = () => {
         </div>
       </div>
 
-      {/* === Content Section === */}
+      {/* Content Section */}
       <div className="w-full bg-white py-16 text-gray-900">
         <div className="max-w-5xl mx-auto px-6 md:px-20 leading-relaxed">
-          {/* 1. Eligibility */}
+          {/* Eligibility */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">1. Eligibility</h2>
             <ul className="list-disc list-inside text-sm space-y-1">
@@ -39,7 +39,7 @@ const TermsOfService = () => {
             </ul>
           </section>
 
-          {/* 2. Account registration & security */}
+          {/* Account registration & security */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">
               2. Account registration & security
@@ -55,7 +55,7 @@ const TermsOfService = () => {
             </ul>
           </section>
 
-          {/* 3. Services */}
+          {/* Services */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">3. Services</h2>
             <p className="text-sm mb-2">The app provides:</p>
@@ -67,7 +67,7 @@ const TermsOfService = () => {
             </ul>
           </section>
 
-          {/* 4. Compliance & KYC */}
+          {/* Compliance & KYC */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">4. Compliance & KYC</h2>
             <ul className="list-disc list-inside text-sm space-y-1">
@@ -82,7 +82,7 @@ const TermsOfService = () => {
             </ul>
           </section>
 
-          {/* 5. Prohibited by us */}
+          {/* Prohibited by us */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">5. Prohibited by us</h2>
             <p className="text-sm mb-2">You agree not to use the App for:</p>
@@ -96,7 +96,7 @@ const TermsOfService = () => {
             </ul>
           </section>
 
-          {/* 6. Transactions */}
+          {/* Transactions */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">6. Transactions</h2>
             <ul className="list-disc list-inside text-sm space-y-1">
@@ -114,7 +114,7 @@ const TermsOfService = () => {
             </ul>
           </section>
 
-          {/* 7. Staking & Investments */}
+          {/* Staking & Investments */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">
               7. Staking & Investments
@@ -130,7 +130,7 @@ const TermsOfService = () => {
             </ul>
           </section>
 
-          {/* 8. Limitation of liability */}
+          {/* Limitation of liability */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">8. Limitation of liability</h2>
             <ul className="list-disc list-inside text-sm space-y-1">
@@ -145,7 +145,7 @@ const TermsOfService = () => {
             </ul>
           </section>
 
-          {/* 9. Termination */}
+          {/* Termination */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">9. Termination</h2>
             <ul className="list-disc list-inside text-sm space-y-1">
@@ -157,7 +157,7 @@ const TermsOfService = () => {
             </ul>
           </section>
 
-          {/* 10. Change of Terms */}
+          {/* Change of Terms */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">10. Change of Terms</h2>
             <p className="text-sm text-black">
@@ -166,7 +166,7 @@ const TermsOfService = () => {
             </p>
           </section>
 
-          {/* 11. Governing law */}
+          {/* Governing law */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">11. Governing law</h2>
             <p className="text-sm text-black">
@@ -175,7 +175,7 @@ const TermsOfService = () => {
             </p>
           </section>
 
-          {/* 12. Contact us */}
+          {/* Contact us */}
           <section>
             <h2 className="font-semibold text-lg mb-2">12. Contact us</h2>
             <p className="text-sm text-black">

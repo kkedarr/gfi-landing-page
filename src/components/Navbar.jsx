@@ -10,7 +10,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Detect scroll to adjust navbar styling
+  {/* To detect scroll to adjust navbar styling */} 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -29,7 +29,7 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-3 sm:px-6 w-full">
-        {/* === Logo === */}
+        {/* Logo */}
         <Link to="/">
           <motion.div
             className="flex items-center gap-1 cursor-pointer select-none"
@@ -49,7 +49,7 @@ const Navbar = () => {
           </motion.div>
         </Link>
 
-        {/* === Desktop Button === */}
+        {/* Desktop Button */}
         <div className="hidden sm:block">
           <motion.button
             whileHover={{ scale: 0.97 }}
@@ -72,7 +72,7 @@ const Navbar = () => {
           </motion.button>
         </div>
 
-        {/* === Mobile Menu Button === */}
+        {/* Mobile Menu Button */}
         <div className="sm:hidden flex items-center">
           <motion.button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -89,7 +89,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* === Mobile Dropdown Menu === */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

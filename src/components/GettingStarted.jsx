@@ -18,7 +18,7 @@ const GettingStarted = () => {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto text-center mb-12"
       >
-        <h2 className="text-3xl md:text-4xl font-semibold">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter">
           Get Started in 3 Easy Steps
         </h2>
         <p className="text-gray-500 text-sm mt-2">

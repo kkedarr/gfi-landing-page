@@ -5,7 +5,7 @@ import WaitlistPhone from "../assets/images/waitlist-phone.png";
 const JoinWaitlist = () => {
   return (
     <motion.section
-      className="w-full bg-[#1A1A1A] text-white rounded-2xl sm:rounded-3xl md:rounded-[2rem] 
+      className="w-full h-[350px] bg-[#1A1A1A] text-white rounded-2xl sm:rounded-3xl md:rounded-[2rem] 
       px-4 sm:px-8 md:px-16 py-12 sm:py-16 flex flex-col md:flex-row 
       justify-between items-center gap-10 max-w-6xl mx-auto my-16 sm:my-20 overflow-hidden font-geist"
       initial={{ opacity: 0, y: 60 }}
@@ -13,7 +13,7 @@ const JoinWaitlist = () => {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      {/* === Left Side === */}
+      {/* Left Side */}
       <motion.div
         className="flex-1 w-full text-center md:text-left"
         initial={{ opacity: 0, x: -40 }}
@@ -21,7 +21,7 @@ const JoinWaitlist = () => {
         viewport={{ once: true }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <h2 className="text-2xl text-white sm:text-3xl md:text-4xl font-semibold mb-3 tracking-tight leading-snug">
+        <h2 className="text-2xl text-white sm:text-3xl md:text-4xl font-semibold mb-3 tracking-tighter leading-snug">
           Join the waitlist today
         </h2>
 
@@ -30,7 +30,7 @@ const JoinWaitlist = () => {
           and enjoy free transactions.
         </p>
 
-        {/* === Email Input === */}
+        {/* Email Input */}
         <div className="flex flex-col sm:flex-row items-center 
         bg-[#646464] rounded-lg overflow-hidden w-full max-w-xs sm:max-w-sm 
         mx-auto md:mx-0 transition-transform duration-300 hover:scale-[1.02]">
@@ -52,9 +52,9 @@ const JoinWaitlist = () => {
         </div>
       </motion.div>
 
-      {/* === Right Side — Image === */}
+      {/* Right Side Image */}
       <motion.div
-        className="flex-1 flex justify-center md:justify-end"
+        className="flex-1 flex justify-center md:justify-end mt-[65px]"
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}

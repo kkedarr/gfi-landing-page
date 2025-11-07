@@ -15,7 +15,7 @@ const Footer = () => {
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
 
-        {/* === Left section === */}
+        {/* Left section */}
         <motion.div
           className="w-full md:w-1/3 flex flex-col items-start text-left"
           initial={{ opacity: 0, x: -40 }}
@@ -39,7 +39,7 @@ const Footer = () => {
           </p>
         </motion.div>
 
-        {/* === Middle links section === */}
+        {/* Middle links section */}
         <motion.div
           className="w-full md:w-auto flex flex-col text-sm gap-2 md:gap-3 text-left items-start"
           initial={{ opacity: 0, y: 40 }}
@@ -85,7 +85,7 @@ const Footer = () => {
           />
         </motion.div>
 
-        {/* === Right section (email form) === */}
+        {/* Right section */}
         <motion.div
           className="w-full md:w-auto flex flex-col items-start text-left"
           initial={{ opacity: 0, x: 40 }}

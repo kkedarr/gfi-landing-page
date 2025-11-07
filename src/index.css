@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
 
 
-
-/* =========================
-   Tailwind Imports
-========================= */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,49 +11,30 @@
   }
 }
 
-/* =========================
-   Global Font + Base Layer
-========================= */
 
 
-/* =========================
-   Global Styles
-========================= */
+/* Global Styles */
 html, body {
   @apply bg-white text-gray-900 scroll-smooth antialiased;
 }
 
-/* =========================
-   Container Utility
-========================= */
 .container {
   @apply max-w-7xl mx-auto px-2;
 }
 
-/* =========================
-   Section Spacing
-========================= */
 .section {
   @apply py-16 md:py-24;
 }
 
-/* =========================
-   Headings
-========================= */
+
 h1, h2, h3, h4, h5, h6 {
   @apply font-semibold text-slate-900;
 }
 
-/* =========================
-   Paragraphs
-========================= */
 p {
   @apply text-gray-600 leading-relaxed;
 }
 
-/* =========================
-   Buttons
-========================= */
 .btn-primary {
   @apply bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-200;
 }
@@ -66,16 +43,10 @@ p {
   @apply border border-blue-600 text-blue-600 font-medium px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-200;
 }
 
-/* =========================
-   Links
-========================= */
 a {
   @apply text-blue-600 hover:text-blue-700 transition-colors duration-200;
 }
 
-/* =========================
-   Footer
-========================= */
 footer {
   @apply border-t border-gray-200 mt-16 pt-8 pb-6 text-center text-sm text-gray-500;
 }

@@ -5,7 +5,7 @@ import PrivacyIcon from "../assets/images/privacypolicyicon.png";
 const PrivacyPolicy = () => {
   return (
     <div className="w-full flex flex-col">
-      {/* === Header Section === */}
+      {/* Header Section */}
       <div className="w-full bg-[#FFEBC7] py-20 text-gray-900">
         <div className="max-w-5xl mx-auto px-6 md:px-20">
           <div className="flex items-center gap-3 mb-4">
@@ -25,10 +25,10 @@ const PrivacyPolicy = () => {
         </div>
       </div>
 
-      {/* === Content Section === */}
+      {/* Content Section */}
       <div className="w-full bg-white py-16 text-gray-900">
         <div className="max-w-5xl mx-auto px-6 md:px-20 leading-relaxed">
-          {/* 1. Information we collect */}
+          {/* Information we collect */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">
               1. Information we collect
@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
             </ul>
           </section>
 
-          {/* 2. How We Use Your Information */}
+          {/* How We Use Your Information */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">
               2. How We Use Your Information
@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
             </ul>
           </section>
 
-          {/* 3. Data Sharing */}
+          {/* Data Sharing */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">3. Data Sharing</h2>
             <p className="text-sm mb-2">
@@ -76,7 +76,7 @@ const PrivacyPolicy = () => {
             </ul>
           </section>
 
-          {/* 4. Security */}
+          {/* Security */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">4. Security</h2>
             <p className="text-sm mb-2">
@@ -93,7 +93,7 @@ const PrivacyPolicy = () => {
             </ul>
           </section>
 
-          {/* 5. Your rights */}
+          {/* Your rights */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">5. Your rights</h2>
             <p className="text-sm mb-2">
@@ -106,7 +106,7 @@ const PrivacyPolicy = () => {
             </ul>
           </section>
 
-          {/* 6. Data retention */}
+          {/* Data retention */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">6. Data retention</h2>
             <p className="text-sm text-black">
@@ -115,7 +115,7 @@ const PrivacyPolicy = () => {
             </p>
           </section>
 
-          {/* 7. Cookies and Tracking */}
+          {/* Cookies and Tracking */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">
               7. Cookies and Tracking
@@ -126,7 +126,7 @@ const PrivacyPolicy = () => {
             </p>
           </section>
 
-          {/* 8. Updates to This Policy */}
+          {/* Updates to This Policy */}
           <section className="mb-8">
             <h2 className="font-semibold text-lg mb-2">
               8. Updates to This Policy
@@ -137,7 +137,7 @@ const PrivacyPolicy = () => {
             </p>
           </section>
 
-          {/* 9. Contact us */}
+          {/* Contact us */}
           <section>
             <h2 className="font-semibold text-lg mb-2">9. Contact us</h2>
             <p className="text-sm text-black">

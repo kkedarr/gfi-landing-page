@@ -4,7 +4,7 @@ import SeamlessP2PImage1 from "../assets/images/seamlessptopimage1.png";
 import SeamlessP2PImage2 from "../assets/images/seamlessptopimage2.png";
 import SeamlessP2PImage3 from "../assets/images/seamlessptopimage3.png";
 
-// === Import your flowered flag images ===
+{/* Import your flowered flag images */} 
 import FlagNG from "../assets/images/flowerflag1.png";
 import FlagKE from "../assets/images/flowerflag2.png";
 import FlagRU from "../assets/images/flowerflag3.png";
@@ -19,7 +19,7 @@ import FlagGH2 from "../assets/images/flowerflag11.png";
 import FlagCI from "../assets/images/flowerflag12.png";
 
 const Feature = () => {
-  // === Flag positions for large screens (desktop/tablet) ===
+  {/* Flag positions for large screens */} 
   const flagLayout = [
     { src: FlagNG, top: "15%", left: "5%" },
     { src: FlagKE, top: "15%", left: "28%" },
@@ -40,26 +40,29 @@ const Feature = () => {
   return (
     <section className="w-full px-4 sm:px-6 md:px-20 py-12 sm:py-16 bg-white text-gray-900 overflow-visible">
       <div className="max-w-6xl mx-auto">
-        {/* === Header Section === */}
+        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center md:text-left"
+          className="text-center"
         >
           <p className="text-[11px] sm:text-sm font-bold text-yellow-600 uppercase tracking-widest mb-1 sm:mb-2">
             FEATURES
           </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 leading-snug">
+
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 tracking-tighter">
             What you can do with the app.
           </h2>
-          <p className="text-gray-500 text-xs sm:text-sm max-w-2xl mx-auto md:mx-0">
+
+          <p className="text-gray-500 text-xs sm:text-sm max-w-2xl mx-auto">
             Stay in charge of your financial life and focus on what matters most.
           </p>
         </motion.div>
 
-        {/* === International Transfers Section === */}
+
+        {/* International Transfers Section */}
         <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -70,18 +73,17 @@ const Feature = () => {
         >
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-12">
             
-            {/* === Left Content (text section) === */}
+            {/* Left Content (text section) */}
             <div className="md:max-w-[55%] text-center md:text-left sm:pt-0 pt-12"> 
-            {/* ↑ Added md:pl-12 lg:pl-16 — gives extra left padding (affects layout slightly on right too) */}
-
-            <span className="inline-block bg-[#E2A336] text-white text-[10px] sm:text-xs px-4 sm:px-5 py-2 rounded-full mb-4 sm:mb-6">
+            
+            <span className="lg:mt-12 inline-block bg-[#E2A336] text-white text-[10px] sm:text-xs px-4 sm:px-5 py-2 rounded-full mb-4 sm:mb-6">
                 International Transfers
             </span>
 
-            <h3 className="text-2xl sm:text-3xl text-white md:text-5xl font-semibold tracking-tight leading-snug">
+            <h3 className="text-2xl sm:text-3xl text-white md:text-5xl font-semibold tracking-tighter leading-snug">
                 Move money seamlessly
                 <br />
-                <span className="text-[#FFBA18]">Across borders</span>
+                <span className="text-[#FFBA18] tracking-tighter">Across borders</span>
             </h3>
 
             <p className="text-white/80 mt-3 sm:mt-4 text-[12px] sm:text-sm leading-relaxed mb-12 max-w-md mx-auto md:mx-0">
@@ -91,11 +93,10 @@ const Feature = () => {
             </p>
             </div>
 
-            {/* === Right Content: Flowered Flags === */}
+            {/* Right Content */}
             <div className="relative md:w-[45%] w-full h-[360px] sm:h-[420px] md:h-[430px] pt-8 m-0 p-0">
-            {/* ↑ Removed all internal padding or margin */}
-
-            {/* --- Desktop/tablet layout (absolute positions) --- */}
+            
+            {/* Desktop/tablet layout */}
             <div className="hidden sm:block w-full h-full relative">
                 {flagLayout.map((flag, i) => (
                 <motion.div
@@ -120,7 +121,7 @@ const Feature = () => {
                 ))}
             </div>
 
-            {/* --- Mobile layout (grid) --- */}
+            {/* Mobile layout */}
             <div className="sm:hidden grid grid-cols-3 gap-2 place-items-center">
                 {[
                 FlagNG, FlagKE, FlagRU, FlagGH,
@@ -142,9 +143,9 @@ const Feature = () => {
         </motion.div>
 
 
-        {/* === Lower Feature Cards === */}
+        {/* Lower Feature Cards */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {/* === Seamless P2P Card === */}
+          {/* Seamless P2P Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -157,7 +158,7 @@ const Feature = () => {
               Seamless P2P
             </span>
 
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight text-gray-900 mb-3">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight text-gray-900 mb-3 tracking-tighter">
               Seamless <span className="text-[#A05A00]">P2P</span>
             </h3>
 
@@ -181,7 +182,7 @@ const Feature = () => {
             </div>
           </motion.div>
 
-          {/* === Pay Instantly with GFI Tag Card === */}
+          {/* Pay Instantly with GFI Tag Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -194,7 +195,7 @@ const Feature = () => {
               @nametag
             </span>
 
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-3">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-3 tracking-tighter">
               Pay instantly with GFI tag
             </h3>
 
