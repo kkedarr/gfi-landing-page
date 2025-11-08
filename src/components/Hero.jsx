@@ -5,6 +5,7 @@ import flagNG from "../assets/images/ngflag.png";
 import flagNA from "../assets/images/naflag.png";
 import flagRU from "../assets/images/ruflag.png";
 import flagZA from "../assets/images/zaflag.png";
+import centerPattern from "../assets/images/herobgpattern.png"; // 🌀 Add this line
 
 const Hero = () => {
   const ref = useRef(null);
@@ -24,11 +25,18 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="bg-[#FFEBC7] py-16 md:py-24 overflow-hidden"
+      className="relative bg-[#FFEBC7] py-16 md:py-24 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 items-center gap-12 font-geisel">
+      {/* 🌤️ Center Background Pattern */}
+      <img
+        src={centerPattern}
+        alt="Background pattern"
+        className="absolute inset-0 m-auto opacity-100 w-[900px] h-[1000px] object-contain z-0 pointer-events-none"
+        style={{ transform: "translateY(10%)" }} 
+      />
 
-        {/*  Left Side — Text + Input */}
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 items-center gap-12 font-geisel z-10">
+        {/* Left Side — Text + Input */}
         <div className="text-left max-w-md md:max-w-lg mx-auto md:mx-0 order-2 md:order-1">
           <h1 className="text-4xl sm:text-7xl md:text-7xl font-bold mb-4 leading-tight text-[#1C2024] text-center md:text-left">
             Seamless cross border payments
@@ -61,7 +69,7 @@ const Hero = () => {
           </p>
         </div>
 
-        {/*  Right Side — Image + Floating Boxes  */}
+        {/* Right Side — Image + Floating Boxes */}
         <motion.div
           style={{ scale }}
           className="relative flex justify-center md:justify-end mt-10 md:mt-0 order-1 md:order-2"

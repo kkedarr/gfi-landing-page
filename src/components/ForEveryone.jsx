@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 import studentImg from "../assets/images/studentuser.png";
 import remoteImg from "../assets/images/remoteuser.png";
-import individualImg from "../assets/images/studentuser.png";
-import smeImg from "../assets/images/remoteuser.png";
+import individualImg from "../assets/images/individualuser.png";
+import smeImg from "../assets/images/smeuser.png";
 
 const UsersSection = () => {
   const slides = [
@@ -29,7 +29,7 @@ const UsersSection = () => {
     {
       label: "SMEs",
       description:
-        "Pay suppliers, accept foreign payments, and grow your business globally with ease and confidence.",
+        "Simplify cross border operations, pay suppliers, and manage team transactions securely",
       image: smeImg,
     },
   ];
@@ -62,16 +62,16 @@ const UsersSection = () => {
 
   return (
     <section className="bg-white py-24 px-6 md:px-16 lg:px-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Title & Subtitle */}
-        <div className="text-center mb-10">
+        <div className="text-left mb-10">
           <p className="text-[#AB6400] font-medium text-sm tracking-wide uppercase">
             Who Can Use Glovest
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#1C2024] mt-2 tracking-tighter">
             Built for Everyone in the Global Financial Network
           </h2>
-          <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-md text-[#838383]">
+          <p className="text-gray-500 mt-4 max-w-2xl text-md text-[#838383]">
             Whether you’re sending money home, managing international payments,
             or growing your assets — Glovest makes cross-border finance simple,
             fast, and secure.
@@ -109,7 +109,7 @@ const UsersSection = () => {
         {/* Buttons */}
         <div
             className="
-            w-[740px] mx-auto
+            w-[740px]
             border rounded-full flex flex-wrap
             py-2 px-1 justify-center gap-4 mb-14
             "
@@ -118,10 +118,10 @@ const UsersSection = () => {
             <button
                 key={index}
                 onClick={() => handleUserClick(index)}
-                className={`px-5 py-2 text-md rounded-full text-[#838383] transition-all duration-300 ${
+                className={`px-5 py-2 text-md rounded-full text-gray-500 transition-all duration-300 ${
                 activeIndex === index
-                    ? "bg-gray-100 text-[#202020] scale-105"
-                    : "bg-transparent hover:border hover:rounded-full text-gray-700 hover:bg-gray-100 scale-100"
+                    ? "bg-gray-100 text-gray-700 scale-105"
+                    : "bg-transparent hover:border hover:rounded-full hover:text-black hover:bg-gray-100 scale-100"
                 }`}
             >
                 {slide.label}
@@ -143,35 +143,42 @@ const UsersSection = () => {
             >
                 {slides.concat(slides).map((slide, i) => (
                 <div
-                    key={i}
-                    className="min-w-[50%] flex-shrink-0 relative rounded-2xl overflow-hidden shadow-lg"
-                >
-                    <img
-                    src={slide.image}
-                    alt={slide.label}
-                    className="w-full h-[480px] object-cover rounded-2xl"
-                    />
+              key={i}
+              className="min-w-[50%] flex-shrink-0 relative rounded-2xl overflow-hidden shadow-lg"
+            >
+              {/* Background */}
+              <img
+                src={slide.image}
+                alt={slide.label}
+                className="w-full h-[500px] object-cover rounded-2xl"
+              />
 
-                    <div className="absolute inset-0 bg-black/40 rounded-2xl" />
+              {/* Label */}
+              <span
+                className="
+                  absolute top-4 right-4
+                  bg-white/25 backdrop-blur-md
+                  text-sm px-3 py-1.5 rounded-full
+                  font-medium text-white tracking-wide
+                "
+              >
+                {slide.label}
+              </span>
 
-                    {/* Label */}
-                    <span
-                    className="
-                        absolute top-6 right-6
-                        inline-block bg-white/25 backdrop-blur-md
-                        text-sm px-4 py-2 rounded-full font-medium text-white
-                    "
-                    >
-                    {slide.label}
-                    </span>
-
-                    {/* Description */}
-                    <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <p className="text-white md:text-md leading-relaxed">
-                        {slide.description}
-                    </p>
-                    </div>
-                </div>
+              {/* Description Overlay */}
+              <div
+                className="
+                  absolute bottom-0 left-0 right-0
+                  bg-black/50 backdrop-blur-[1px]
+                  px-5 py-4
+                  text-white
+                "
+              >
+                <p className="text-sm md:text-base text-white leading-relaxed">
+                  {slide.description}
+                </p>
+              </div>
+            </div>
                 ))}
             </motion.div>
           </div>

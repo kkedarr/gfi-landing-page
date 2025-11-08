@@ -1,27 +1,49 @@
 import { motion } from "framer-motion";
-import brandImage from "../assets/images/herotwoleftimage.png";
+import foregroundImg from "../assets/images/mockupimageforsecondsection.png";
 import brandLogo from "../assets/images/gfilogo.png"; 
 import textLogo from "../assets/images/gfilogotext.png";
+import ellipse1 from "../assets/images/eclipse1intro.png";
 
 const Intro = () => {
   return (
-    <section className="bg-white py-20 px-6 md:px-16 lg:px-32">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16">
+    <section className="bg-[#FCFCFD] py-20 px-6 md:px-16 lg:px-32">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16">
         
+        {/* Left Image */}
         {/* Left Image */}
         <motion.div
           initial={{ x: -60, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex-1 w-full"
+          className="flex-1 w-full h-full relative flex justify-center items-center bg-[#FFEDCB] rounded-3xl overflow-hidden"
         >
+          {/* 🎯 Ellipse Background Image */}
           <img
-            src={brandImage}
-            alt="Glovest Mobile Preview"
-            className="w-full max-w-[520px] mx-auto rounded-3xl object-contain"
+            src={ellipse1}
+            alt="ellipses background"
+            className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+          />
+
+          {/* 📱 Floating Phone Image (always above ellipse) */}
+          <motion.img
+            src={foregroundImg}
+            alt="Glovest Mobile"
+            className="relative z-10 w-full max-w-[400px] mx-auto mr-60"
+            animate={{
+              y: [200, 40, 200],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
           />
         </motion.div>
+
+
+
+
 
         {/* Right Text */}
         <motion.div
@@ -48,16 +70,15 @@ const Intro = () => {
           </h2>
 
           {/* Paragraphs */}
-          <p className="text-gray-600 text-base md:text-md leading-relaxed mb-4">
-            Glovest brings the power of international finance to your fingertips.
-            Backed by <span className="font-semibold text-[#1C2024]">Global Financial Investment</span>,
-            our mission is to make cross-border payments faster, smarter, and more connected than ever.
+          <p className="text-[#1C2024] text-base md:text-md leading-relaxed mb-4">
+            Glovest is a next-generation financial app by <span className="font-semibold text-[#1C2024]">Global Financial Investment</span>,
+            built to simplify how poeple and businesses manage money across borders. Whether you're an individual sending funds to family,
+            a freelancer working with global clients, or a small business handling international payments.
           </p>
 
-          <p className="text-gray-600 text-base md:text-md leading-relaxed">
-            Glovest brings the power of international finance to your fingertips.
-            Backed by <span className="font-semibold text-[#1C2024]">Global Financial Investment</span>,
-            our mission is to make cross-border payments faster, smarter, and more connected than ever.
+          <p className="text-[#1C2024] text-base md:text-md leading-relaxed">
+            Glovest provides a secure, all-in-one platform for fiat and crypto transactions. With multi-currency wallets and 
+            real-time transfers, it's the smarter way to send, recieve, and grow your money - anywhere in the world.
           </p>
         </motion.div>
       </div>
