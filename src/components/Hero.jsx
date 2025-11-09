@@ -27,7 +27,7 @@ const Hero = () => {
       ref={ref}
       className="relative bg-[#FFEBC7] py-16 md:py-24 overflow-hidden"
     >
-      {/* 🌤️ Center Background Pattern */}
+      {/* Center Background Pattern */}
       <img
         src={centerPattern}
         alt="Background pattern"
