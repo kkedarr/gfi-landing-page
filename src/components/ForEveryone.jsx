@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-
 import studentImg from "../assets/images/studentuser.png";
 import remoteImg from "../assets/images/remoteuser.png";
 import individualImg from "../assets/images/individualuser.png";

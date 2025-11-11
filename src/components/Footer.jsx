@@ -1,10 +1,41 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Logo from "../assets/images/gfilogo.png";
 import FooterLogo from "../assets/images/footersecondlogo.png";
 import textLogo from "../assets/images/gfilogotext.png";
+import { joinWaitlist } from "../services/waitlistService";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      setMessage("Please enter your email");
+      return;
+    }
+
+    setLoading(true);
+    setMessage("");
+
+    const result = await joinWaitlist(email);
+
+    if (result.success) {
+      setMessage(result.message);
+      setEmail("");
+    } else {
+      setMessage(result.message);
+    }
+
+    setLoading(false);
+
+    setTimeout(() => setMessage(""), 5000);
+  };
+
   return (
     <motion.footer
       className="w-full bg-[#FFBA18] text-black py-14 px-6 md:px-20 font-geist"
@@ -93,22 +124,35 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.7 }}
         >
-          <motion.div
-            className="flex flex-col sm:flex-row items-stretch bg-[#4F3422] rounded-lg overflow-hidden w-full max-w-sm transition-transform duration-300 hover:scale-[1.02]"
-          >
-            <input
-              type="email"
-              placeholder="Enter email"
-              className="flex-grow px-4 py-3 bg-[#4F3422] text-white placeholder:text-gray-300 rounded-xl text-sm focus:outline-none w-full sm:w-auto"
-            />
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#FFBA18] text-[#4F3422] px-6 py-3 text-sm font-semibold rounded-xl sm:rounded-xl border-2 border-[#4F3422] hover:bg-white hover:text-black transition-all duration-300 mt-3 sm:mt-0"
+          <form onSubmit={handleSubmit} className="w-full">
+            <motion.div
+              className="flex flex-col sm:flex-row items-stretch bg-[#4F3422] rounded-lg overflow-hidden w-full max-w-sm transition-transform duration-300 hover:scale-[1.02]"
             >
-              Join waitlist
-            </motion.button>
-          </motion.div>
+              <input
+                type="email"
+                placeholder="Enter email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={loading}
+                className="flex-grow px-4 py-3 bg-[#4F3422] text-white placeholder:text-gray-300 rounded-xl text-sm focus:outline-none w-full sm:w-auto disabled:opacity-50"
+              />
+              <motion.button
+                type="submit"
+                disabled={loading}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#FFBA18] text-[#4F3422] px-6 py-3 text-sm font-semibold rounded-xl sm:rounded-xl border-2 border-[#4F3422] hover:bg-white hover:text-black transition-all duration-300 mt-3 sm:mt-0 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading ? "Joining..." : "Join waitlist"}
+              </motion.button>
+            </motion.div>
+
+            {message && (
+              <p className={`text-xs mt-2 ${message.includes("added") ? "text-green-700" : "text-red-700"}`}>
+                {message}
+              </p>
+            )}
+          </form>
         </motion.div>
       </div>
     </motion.footer>

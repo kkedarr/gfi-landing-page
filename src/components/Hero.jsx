@@ -1,14 +1,18 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import heroMockup from "../assets/images/heromockup.png";
 import flagNG from "../assets/images/ngflag.png";
 import flagNA from "../assets/images/naflag.png";
 import flagRU from "../assets/images/ruflag.png";
 import flagZA from "../assets/images/zaflag.png";
 import centerPattern from "../assets/images/herobgpattern.png";
+import { joinWaitlist } from "../services/waitlistService";
 
 const Hero = () => {
   const ref = useRef(null);
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -22,6 +26,31 @@ const Hero = () => {
     { bottom: "10%", left: "0%", flag: flagZA, amount: "ZAR 100,000" },
   ];
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      setMessage("Please enter your email");
+      return;
+    }
+
+    setLoading(true);
+    setMessage("");
+
+    const result = await joinWaitlist(email);
+
+    if (result.success) {
+      setMessage(result.message);
+      setEmail("");
+    } else {
+      setMessage(result.message);
+    }
+
+    setLoading(false);
+
+    setTimeout(() => setMessage(""), 5000);
+  };
+
   return (
     <section
       ref={ref}
@@ -32,7 +61,7 @@ const Hero = () => {
         src={centerPattern}
         alt="Background pattern"
         className="absolute inset-0 m-auto opacity-100 w-[900px] h-[1000px] object-contain z-0 pointer-events-none"
-        style={{ transform: "translateY(10%)" }} 
+        style={{ transform: "translateY(10%)" }}
       />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 items-center gap-12 font-geisel z-10">
@@ -49,20 +78,31 @@ const Hero = () => {
 
           {/* Join Waitlist Input */}
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit}
             className="flex flex-col sm:flex-row items-center sm:items-stretch bg-[#4F3422] rounded-xl overflow-hidden border border-gray-300 max-w-sm mx-auto md:mx-0"
           >
             <input
               type="email"
               placeholder="Enter email"
-              className="flex-grow px-4 bg-[#4F3422] py-3 text-gray-100 text-sm rounded-2xl placeholder:text-gray-400 focus:outline-none w-full sm:w-auto"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={loading}
+              className="flex-grow px-4 bg-[#4F3422] py-3 text-gray-100 text-sm rounded-2xl placeholder:text-gray-400 focus:outline-none w-full sm:w-auto disabled:opacity-50"
             />
             <button
-              className="bg-[#FFBA18] text-[#4F3422] sm:px-6 sm:py-3 px-4 py-2 text-xs rounded-xl sm:text-sm font-semibold sm:border-0 sm:border-2 border-2 border-[#4F3422] hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto"
+              type="submit"
+              disabled={loading}
+              className="bg-[#FFBA18] text-[#4F3422] sm:px-6 sm:py-3 px-4 py-2 text-xs rounded-xl sm:text-sm font-semibold sm:border-0 sm:border-2 border-2 border-[#4F3422] hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Join waitlist
+              {loading ? "Joining..." : "Join waitlist"}
             </button>
           </form>
+
+          {message && (
+            <p className={`text-xs mt-2 text-center md:text-left ${message.includes("added") ? "text-green-700" : "text-red-700"}`}>
+              {message}
+            </p>
+          )}
 
           <p className="text-[#4F3422]/70 text-xs mt-3 text-center md:text-left">
             Launching soon in 10+ countries
