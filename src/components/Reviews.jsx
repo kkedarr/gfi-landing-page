@@ -60,10 +60,10 @@ const Reviews = () => {
         <p className="text-sm font-medium text-[#AB6400] uppercase tracking-wide mb-2">
           Testimonials
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 tracking-tighter">
+        <h2 className="text-2xl md:text-4xl font-semibold mb-2 tracking-tighter">
           Customer Reviews
         </h2>
-        <p className="text-gray-500">Hear what our users are saying</p>
+        <p className="text-sm md:text-base text-gray-500">Hear what our users are saying</p>
       </motion.div>
 
       {/* Reviews Grid */}
@@ -90,7 +90,7 @@ const Reviews = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="bg-[#F9F9F9] rounded-2xl p-8 flex flex-col justify-between min-h-[250px] shadow-sm hover:shadow-md transition-shadow duration-200"
           >
-            <p className="text-[#5E5E5E] text-[15px] leading-relaxed mb-6">
+            <p className="text-[#5E5E5E] text-sm md:text-base leading-relaxed mb-6">
               “{review.text}”
             </p>
             <div className="flex items-center justify-between">

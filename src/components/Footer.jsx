@@ -61,11 +61,11 @@ const Footer = () => {
             </div>
           </Link>
 
-          <p className="text-sm text-black/80 leading-relaxed mb-6 max-w-sm">
+          <p className="text-xs md:text-base text-black/80 leading-relaxed mb-6 max-w-sm">
             A secure multi-currency wallet that lets you deposit, withdraw, and transfer both fiat and crypto across Africa and global markets.
           </p>
 
-          <p className="text-xs text-black/70">
+          <p className="text-xs md:text-base text-black/70">
             © Copyright 2025, All Rights Reserved
           </p>
         </motion.div>
@@ -78,30 +78,45 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <h4 className="font-semibold mb-2 text-lg md:text-base">Quick links</h4>
+          <h4 className="font-semibold mb-2 text-sm md:text-base">Quick links</h4>
 
-          <div className="grid grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-2 w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-2 w-full text-xs md:text-base">
             <Link
               to="/privacy"
-              className="text-[#1C2024] hover:underline hover:translate-x-1 transition-transform duration-200"
+              className="text-[#1C2024] hover:text-[#1C2024] hover:underline hover:translate-x-1 transition-transform duration-200"
             >
               Privacy policy
             </Link>
             <Link
               to="/terms"
-              className="text-[#1C2024] hover:underline hover:translate-x-1 transition-transform duration-200"
+              className="text-[#1C2024] hover:text-[#1C2024] hover:underline hover:translate-x-1 transition-transform duration-200"
             >
               Terms of service
             </Link>
+
+            {/* Email and Phone */}
             <a
-              href="#"
-              className="text-[#1C2024] hover:underline hover:translate-x-1 transition-transform duration-200"
+              href="mailto:dausabstephanie3@gmail.com?subject=Greetings%20to%20GFI&body=Hello,%20I%20would%20like%20to..."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1C2024] hover:text-[#1C2024] hover:underline hover:translate-x-1 transition-transform duration-200"
             >
-              Contact Us
+              Contact us
             </a>
+
+            {/* COMMENTED OUT FOR THE MEAN TIME
             <a
-              href="#"
-              className="text-[#1C2024] hover:underline hover:translate-x-1 transition-transform duration-200"
+              href="tel:+264 81xxxxxxxx"
+              className="text-[#1C2024] hover:text-[#1C2024] hover:underline hover:translate-x-1 transition-transform duration-200"
+            >
+              +264 8xxxxxxxxxxx
+            </a>
+            */}
+
+            <a
+              href="https://chat.whatsapp.com/HjsKmLrb3bA9Y9zevC0HeT"
+              target="_blank"
+              className="text-[#1C2024] hover:text-[#1C2024] hover:underline hover:translate-x-1 transition-transform duration-200"
             >
               WhatsApp Community
             </a>
@@ -115,6 +130,7 @@ const Footer = () => {
             transition={{ type: "spring", stiffness: 120 }}
           />
         </motion.div>
+
 
         {/* Right section */}
         <motion.div
@@ -130,6 +146,7 @@ const Footer = () => {
             >
               <input
                 type="email"
+                name="newsletter subscription"
                 placeholder="Enter email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

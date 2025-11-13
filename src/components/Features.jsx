@@ -52,7 +52,7 @@ const Feature = () => {
             FEATURES
           </p>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 tracking-tighter">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-2 tracking-tighter">
             What you can do with the app.
           </h2>
 

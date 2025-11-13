@@ -83,6 +83,7 @@ const Hero = () => {
           >
             <input
               type="email"
+              name="newsletter subscription"
               placeholder="Enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}

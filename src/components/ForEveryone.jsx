@@ -67,10 +67,10 @@ const UsersSection = () => {
           <p className="text-[#AB6400] font-medium text-sm tracking-wide uppercase">
             Who Can Use Glovest
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#1C2024] mt-2 tracking-tighter">
+          <h2 className="text-2xl md:text-4xl font-semibold text-[#1C2024] mt-2 tracking-tighter">
             Built for Everyone in the Global Financial Network
           </h2>
-          <p className="text-gray-500 mt-4 max-w-2xl text-md text-[#838383]">
+          <p className="text-gray-500 mt-4 max-w-2xl text-sm md:text-base text-[#838383]">
             Whether you’re sending money home, managing international payments,
             or growing your assets — Glovest makes cross-border finance simple,
             fast, and secure.
@@ -91,11 +91,11 @@ const UsersSection = () => {
               />
 
               <div className="px-5 py-5">
-                <span className="inline-block bg-black/5 text-xs px-3 py-1 rounded-full font-medium text-gray-700 mb-3">
+                <span className="inline-block bg-black/5 text-sm px-3 py-1 rounded-full font-medium text-gray-700 mb-3">
                   {slide.label}
                 </span>
 
-                <p className="text-sm text-gray-700 leading-relaxed">
+                <p className="text-xs text-gray-700 leading-relaxed">
                   {slide.description}
                 </p>
               </div>

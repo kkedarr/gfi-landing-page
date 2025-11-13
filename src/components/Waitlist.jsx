@@ -55,7 +55,7 @@ const JoinWaitlist = () => {
           Join the waitlist today
         </h2>
 
-        <p className="text-gray-300 mb-6 text-sm sm:text-base max-w-md mx-auto md:mx-0">
+        <p className="text-gray-300 mb-6 text-sm md:text-base max-w-md mx-auto md:mx-0">
           You’ll be the first to know when we launch, get access to beta testing,
           and enjoy free transactions.
         </p>
@@ -67,6 +67,7 @@ const JoinWaitlist = () => {
           mx-auto md:mx-0 transition-transform duration-300 hover:scale-[1.02]">
             <input
               type="email"
+              name="newsletter subscription"
               placeholder="Enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
