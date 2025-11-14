@@ -77,12 +77,12 @@ const JoinWaitlist = () => {
               disabled={loading}
               className="
                 flex-grow 
-                px-3 py-2           /* smaller on mobile */
-                sm:px-4 sm:py-3     /* normal on desktop */
+                px-3 py-2          
+                sm:px-4 sm:py-3    
                 bg-[#646464] 
                 text-gray-100 
                 placeholder-gray-300 
-                text-xs sm:text-sm  /* smaller text on mobile */
+                text-xs sm:text-sm  
                 focus:outline-none 
                 disabled:opacity-50
               "
@@ -95,9 +95,9 @@ const JoinWaitlist = () => {
               whileTap={{ scale: 0.95 }}
               className="
                 bg-[#1A1A1A] text-white 
-                px-2 py-3           /* smaller on mobile */
-                sm:px-6 sm:py-3     /* normal on desktop */
-                text-xs sm:text-sm  /* smaller text on mobile */
+                px-2 py-3           
+                sm:px-6 sm:py-3    
+                text-xs sm:text-sm 
                 font-semibold 
                 border-2 border-[#646464] 
                 rounded-lg 

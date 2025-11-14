@@ -158,12 +158,12 @@ const Footer = () => {
               disabled={loading}
               className="
                 flex-grow 
-                px-3 py-2           /* smaller on mobile - SAME AS GREY VERSION */
-                sm:px-4 sm:py-3     /* desktop size - SAME AS GREY VERSION */
+                px-3 py-2   
+                sm:px-4 sm:py-3  
                 bg-[#4F3422] 
                 text-white 
                 placeholder-gray-300 
-                text-xs sm:text-sm  /* smaller on mobile - SAME AS GREY VERSION */
+                text-xs sm:text-sm  
                 focus:outline-none 
                 disabled:opacity-50
               "
@@ -176,9 +176,9 @@ const Footer = () => {
               whileTap={{ scale: 0.95 }}
               className=" w-full
                 bg-[#FFBA18] text-[#4F3422]
-                px-1 py-3           /* smaller on mobile - SAME AS GREY VERSION */
-                sm:px-6 sm:py-3     /* desktop size - SAME AS GREY VERSION */
-                text-xs sm:text-sm  /* smaller on mobile - SAME AS GREY VERSION */
+                px-1 py-3           
+                sm:px-6 sm:py-3     
+                text-xs sm:text-sm  
                 font-semibold 
                 border-2 border-[#4F3422] 
                 rounded-lg

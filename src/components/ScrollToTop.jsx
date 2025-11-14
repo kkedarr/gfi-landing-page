@@ -1,12 +1,19 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigationType } from "react-router-dom";
 
-export default function ScrollToTop() {
+const ScrollToTop = () => {
   const { pathname } = useLocation();
+  const navigationType = useNavigationType();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    // Only scroll to top on normal link navigation
+    if (navigationType === "PUSH") {
+      window.scrollTo(0, 0);
+    }
+
+  }, [pathname, navigationType]);
 
   return null;
-}
+};
+
+export default ScrollToTop;
