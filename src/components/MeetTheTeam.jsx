@@ -83,12 +83,12 @@ const MeetTheTeam = () => {
 
   return (
     <section className="bg-white py-24 px-6 md:px-16 lg:px-32 overflow-hidden">
-      <div className="max-w-6xl mx-auto text-left">
+      <div className="max-w-6xl mx-auto text-center">
         <p className="text-[#AB6400] font-medium text-sm tracking-wide uppercase">
           Our Team
         </p>
         <h2 className="text-2xl md:text-4xl font-semibold text-[#1C2024] mt-2 mb-4 tracking-tighter">
-          Meet the Visionaries Behind Glovest
+          Meet the Team
         </h2>
       </div>
 
